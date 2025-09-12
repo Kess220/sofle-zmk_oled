@@ -1,21 +1,22 @@
 # 🖥️ Layout Final das Telas OLED - Configuração Personalizada
 
-## 🎯 **CONFIGURAÇÃO ESCOLHIDA:**
-- **TELA ESQUERDA:** Display padrão ZMK (sem widgets nice-oled)
-- **TELA DIREITA:** Bateria + Contador de Velocidade (WPM apenas)
+## 🎯 **CONFIGURAÇÃO CORRIGIDA:**
+- **TELA ESQUERDA:** WPM Counter + informações padrão ZMK 
+- **TELA DIREITA:** Display padrão ZMK (bateria + split status)
 
 ---
 
-## 📱 **TELA ESQUERDA (Lado Master/Central) - PADRÃO ZMK:**
+## 📱 **TELA ESQUERDA (Lado Master/Central) - WPM + PADRÃO:**
 
 ### **🖥️ Layout Esperado:**
 ```
 ┌─────────────────────────┐
-│      default            │  ← Nome da layer ativa
+│    WPM: 45             │  ← Velocidade de digitação
 ├─────────────────────────┤
-│ Output: BT 1            │  ← Conexão ativa (BT/USB)
-│ Battery: 87%            │  ← Nível de bateria
-│ Profile: 1  [BT CONN]   │  ← Perfil BT + Status
+│  ████████▁▁▁▁▁▁▁        │  ← Gráfico de barras WPM
+├─────────────────────────┤
+│ Layer: default          │  ← Nome da layer ativa  
+│ Battery: 87% BT:1       │  ← Bateria + Bluetooth
 └─────────────────────────┘
 ```
 
@@ -38,21 +39,20 @@ Volta ao normal  → "default"
 
 ---
 
-## 📱 **TELA DIREITA (Lado Slave/Periférico) - WPM + BATERIA:**
+## 📱 **TELA DIREITA (Lado Slave/Periférico) - PADRÃO ZMK:**
 
 ### **🖥️ Layout Esperado:**
 ```
 ┌─────────────────────────┐
-│    WPM: 45             │  ← Velocidade de digitação
-├─────────────────────────┤
-│  ████████▁▁▁▁▁▁▁        │  ← Gráfico de barras WPM
+│   Sofle Right           │  ← Identificação do lado
 ├─────────────────────────┤
 │ Battery: 84%            │  ← Bateria do lado direito
 │ Split: Connected        │  ← Status conexão split
+│ Peripheral              │  ← Papel no sistema split
 └─────────────────────────┘
 ```
 
-### **📊 Contador WPM Funcionamento:**
+### **📊 WPM na Tela Esquerda:**
 - **📝 Cálculo:** Tempo real baseado nas teclas pressionadas
 - **📈 Gráfico:** Barras verticais animadas (0-100 WPM)
 - **⏱️ Atualização:** Contínua durante digitação
@@ -68,7 +68,7 @@ Muito rápido:  WPM: 85   ██████████████▁
 Máximo:        WPM: 100  ███████████████
 ```
 
-### **🔋 Informações da Bateria:**
+### **🔋 Informações da Tela Direita:**
 - **Battery:** Nível específico do lado direito
 - **Split:** Status da conexão entre os dois lados
   - `Connected` = Comunicação OK
@@ -96,35 +96,35 @@ Máximo:        WPM: 100  ███████████████
 
 ### **📊 LADO A LADO:**
 ```
-TELA ESQUERDA (Padrão)      TELA DIREITA (WPM + Bateria)
-┌─────────────────────┐     ┌─────────────────────┐
-│ default             │     │ WPM: 45             │
-│ Output: BT 1        │     │ ████████▁▁▁▁▁▁▁     │
-│ Battery: 87%        │     │ Battery: 84%        │
-│ Profile: 1 [CONN]   │     │ Split: Connected    │
-└─────────────────────┘     └─────────────────────┘
+TELA ESQUERDA (WPM + Padrão)   TELA DIREITA (Padrão)
+┌─────────────────────┐       ┌─────────────────────┐
+│ WPM: 45             │       │ Sofle Right         │
+│ ████████▁▁▁▁▁▁▁     │       │ Battery: 84%        │
+│ Layer: default      │       │ Split: Connected    │
+│ Battery: 87% BT:1   │       │ Peripheral          │
+└─────────────────────┘       └─────────────────────┘
 ```
 
 ### **🎬 Durante Digitação Rápida:**
 ```
-ESQUERDA (Sem mudança)      DIREITA (WPM animado)
-┌─────────────────────┐     ┌─────────────────────┐
-│ default             │     │ WPM: 78             │
-│ Output: BT 1        │     │ █████████████▁▁     │ ← Barras se movem
-│ Battery: 87%        │     │ Battery: 84%        │
-│ Profile: 1 [CONN]   │     │ Split: Connected    │
-└─────────────────────┘     └─────────────────────┘
+ESQUERDA (WPM animado)         DIREITA (Sem mudança)
+┌─────────────────────┐       ┌─────────────────────┐
+│ WPM: 78             │       │ Sofle Right         │
+│ █████████████▁▁     │       │ Battery: 84%        │ ← Barras se movem
+│ Layer: default      │       │ Split: Connected    │
+│ Battery: 87% BT:1   │       │ Peripheral          │
+└─────────────────────┘       └─────────────────────┘
 ```
 
 ### **💤 Quando Para de Digitar:**
 ```
-ESQUERDA (Sem mudança)      DIREITA (WPM zerado)
-┌─────────────────────┐     ┌─────────────────────┐
-│ default             │     │ WPM: 0              │
-│ Output: BT 1        │     │ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁     │ ← Barras vazias
-│ Battery: 87%        │     │ Battery: 84%        │
-│ Profile: 1 [CONN]   │     │ Split: Connected    │
-└─────────────────────┘     └─────────────────────┘
+ESQUERDA (WPM zerado)          DIREITA (Sem mudança)
+┌─────────────────────┐       ┌─────────────────────┐
+│ WPM: 0              │       │ Sofle Right         │
+│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁     │       │ Battery: 84%        │ ← Barras vazias
+│ Layer: default      │       │ Split: Connected    │
+│ Battery: 87% BT:1   │       │ Peripheral          │
+└─────────────────────┘       └─────────────────────┘
 ```
 
 ---
@@ -168,9 +168,9 @@ ESQUERDA (Sem mudança)      DIREITA (WPM zerado)
 ## 🎊 **RESULTADO FINAL:**
 
 ### **🎯 Você terá:**
-- **📱 Tela esquerda:** Simples, confiável, informações essenciais
-- **📱 Tela direita:** Motivação com WPM + status de bateria
+- **📱 Tela esquerda:** WPM motivacional + informações essenciais
+- **📱 Tela direita:** Status simples e confiável de bateria/split  
 - **🔋 Bateria:** Longa duração sem animações desnecessárias
 - **⚡ Performance:** Sistema leve e responsivo
 
-**Perfeita combinação de funcionalidade e simplicidade!** 🚀
+**Perfeita combinação de motivação e funcionalidade!** 🚀
