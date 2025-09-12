@@ -1,8 +1,8 @@
 # 🖥️ Layout Final das Telas OLED - Configuração Personalizada
 
-## 🎯 **CONFIGURAÇÃO EQUILIBRADA:**
-- **TELA ESQUERDA:** WPM + Layer + Conexão (limpo, sem excesso)
-- **TELA DIREITA:** Animações dinâmicas + Status (não mais parado)
+## 🎯 **CONFIGURAÇÃO COM DUPLO WPM:**
+- **TELA ESQUERDA:** WPM Gráfico de Barras + Layer + Conexão 📊
+- **TELA DIREITA:** WPM Velocímetro + Animações + Status 🕐
 
 ---
 
@@ -39,25 +39,25 @@ Volta ao normal  → "default"
 
 ---
 
-## 📱 **TELA DIREITA - DINÂMICA E ANIMADA:**
+## 📱 **TELA DIREITA - VELOCÍMETRO WPM:**
 
 ### **🖥️ Layout Esperado:**
 ```
 ┌─────────────────────────┐
-│ ⌨️ CAPS NUM SCR         │  ← Status teclas (pisca quando ativa)
- de animações
+│    WPM: 45             │  ← Mesma velocidade da esquerda
 ├─────────────────────────┤
-│ ⇧⌃⌥⌘ Modifiers        │  ← Shift/Ctrl/Alt/Cmd (tempo real)
+│      ◗────►            │  ← VELOCÍMETRO com agulha
+│   0    50    100       │  ← Escala visual (0-100)
 ├─────────────────────────┤
-│     💎 ◊ ◇ ♦           │  ← Gems girando (animação 1.5s)
+│ ⌨️ CAPS ⇧⌃⌥⌘          │  ← HID + Modifiers compacto
 │ Battery: 84% Split:OK   │  ← Info essencial
 └─────────────────────────┘
 ```
 
-### **🎬 Animações da Tela Direita:**
+### **🎬 Elementos da Tela Direita:**
+- **🕐 Velocímetro WPM:** Agulha se move conforme velocidade de digitação
 - **⌨️ HID Status:** CAPS/NUM/SCROLL piscam quando ativados
 - **🔧 Modifiers:** ⇧⌃⌥⌘ acendem quando pressionados
-- **💎 Gem Animation:** Pedras giram a cada 1.5 segundos
 - **🔋 Info Essencial:** Bateria + status split sempre visível
 
 ### **📊 WPM na Tela Esquerda:**
@@ -102,25 +102,25 @@ Máximo:        WPM: 100  ███████████████
 
 ## 🎯 **COMPARAÇÃO VISUAL:**
 
-### **📊 LADO A LADO EQUILIBRADO:**
+### **📊 DUPLO WPM - DOIS ESTILOS:**
 ```
-TELA ESQUERDA (Limpa + WPM)    TELA DIREITA (Dinâmica)
+TELA ESQUERDA (Gráfico Barras) TELA DIREITA (Velocímetro)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 45             │       │ ⌨️ CAPS NUM SCR     │
-│ ████████▁▁▁▁▁▁▁     │       │ ⇧⌃⌥⌘ Modifiers    │
-│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Animado
-│ BT: Connected       │       │ Battery: 84% OK     │
+│ WPM: 45             │       │ WPM: 45             │
+│ ████████▁▁▁▁▁▁▁     │ ← Barras │   ◗────►          │ ← Agulha
+│ Layer: default      │       │ 0    50   100      │ ← Escala
+│ BT: Connected       │       │ ⌨️ CAPS ⇧⌃⌥⌘       │ ← Compact
 └─────────────────────┘       └─────────────────────┘
 ```
 
-### **🎬 Durante Digitação + Caps Lock Ativo:**
+### **🎬 Durante Digitação Rápida + Caps Lock:**
 ```
-ESQUERDA (WPM subindo)         DIREITA (Reagindo)
+ESQUERDA (Barras subindo)      DIREITA (Agulha girando)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 78             │       │ ⌨️ [CAPS] NUM SCR   │ ← CAPS piscando
-│ █████████████▁▁     │ ← Barras subindo │ ⇧⌃⌥⌘ [SHIFT]      │ ← Shift ativo
-│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Sempre girando
-│ BT: Connected       │       │ Battery: 84% OK     │
+│ WPM: 78             │       │ WPM: 78             │
+│ █████████████▁▁     │ ← Barras │      ◗──────►     │ ← Agulha move
+│ Layer: default      │       │ 0    50     100    │ ← 78% da escala
+│ BT: Connected       │       │ [CAPS] ⇧⌃⌥⌘       │ ← CAPS piscando
 └─────────────────────┘       └─────────────────────┘
 ```
 
