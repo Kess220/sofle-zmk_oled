@@ -1,22 +1,22 @@
 # 🖥️ Layout Final das Telas OLED - Configuração Personalizada
 
-## 🎯 **CONFIGURAÇÃO CORRIGIDA:**
-- **TELA ESQUERDA:** WPM Counter + informações padrão ZMK 
-- **TELA DIREITA:** Display padrão ZMK (bateria + split status)
+## 🎯 **CONFIGURAÇÃO EQUILIBRADA:**
+- **TELA ESQUERDA:** WPM + Layer + Conexão (limpo, sem excesso)
+- **TELA DIREITA:** Animações dinâmicas + Status (não mais parado)
 
 ---
 
-## 📱 **TELA ESQUERDA (Lado Master/Central) - WPM + PADRÃO:**
+## 📱 **TELA ESQUERDA - LIMPA E FUNCIONAL:**
 
 ### **🖥️ Layout Esperado:**
 ```
 ┌─────────────────────────┐
-│    WPM: 45             │  ← Velocidade de digitação
+│    WPM: 45             │  ← Velocímetro principal
 ├─────────────────────────┤
-│  ████████▁▁▁▁▁▁▁        │  ← Gráfico de barras WPM
+│  ████████▁▁▁▁▁▁▁        │  ← Gráfico motivacional
 ├─────────────────────────┤
-│ Layer: default          │  ← Nome da layer ativa  
-│ Battery: 87% BT:1       │  ← Bateria + Bluetooth
+│ Layer: default          │  ← Nome da layer
+│ BT: Connected           │  ← Status conexão
 └─────────────────────────┘
 ```
 
@@ -39,18 +39,26 @@ Volta ao normal  → "default"
 
 ---
 
-## 📱 **TELA DIREITA (Lado Slave/Periférico) - PADRÃO ZMK:**
+## 📱 **TELA DIREITA - DINÂMICA E ANIMADA:**
 
 ### **🖥️ Layout Esperado:**
 ```
 ┌─────────────────────────┐
-│   Sofle Right           │  ← Identificação do lado
+│ ⌨️ CAPS NUM SCR         │  ← Status teclas (pisca quando ativa)
+ de animações
 ├─────────────────────────┤
-│ Battery: 84%            │  ← Bateria do lado direito
-│ Split: Connected        │  ← Status conexão split
-│ Peripheral              │  ← Papel no sistema split
+│ ⇧⌃⌥⌘ Modifiers        │  ← Shift/Ctrl/Alt/Cmd (tempo real)
+├─────────────────────────┤
+│     💎 ◊ ◇ ♦           │  ← Gems girando (animação 1.5s)
+│ Battery: 84% Split:OK   │  ← Info essencial
 └─────────────────────────┘
 ```
+
+### **🎬 Animações da Tela Direita:**
+- **⌨️ HID Status:** CAPS/NUM/SCROLL piscam quando ativados
+- **🔧 Modifiers:** ⇧⌃⌥⌘ acendem quando pressionados
+- **💎 Gem Animation:** Pedras giram a cada 1.5 segundos
+- **🔋 Info Essencial:** Bateria + status split sempre visível
 
 ### **📊 WPM na Tela Esquerda:**
 - **📝 Cálculo:** Tempo real baseado nas teclas pressionadas
@@ -94,36 +102,36 @@ Máximo:        WPM: 100  ███████████████
 
 ## 🎯 **COMPARAÇÃO VISUAL:**
 
-### **📊 LADO A LADO:**
+### **📊 LADO A LADO EQUILIBRADO:**
 ```
-TELA ESQUERDA (WPM + Padrão)   TELA DIREITA (Padrão)
+TELA ESQUERDA (Limpa + WPM)    TELA DIREITA (Dinâmica)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 45             │       │ Sofle Right         │
-│ ████████▁▁▁▁▁▁▁     │       │ Battery: 84%        │
-│ Layer: default      │       │ Split: Connected    │
-│ Battery: 87% BT:1   │       │ Peripheral          │
+│ WPM: 45             │       │ ⌨️ CAPS NUM SCR     │
+│ ████████▁▁▁▁▁▁▁     │       │ ⇧⌃⌥⌘ Modifiers    │
+│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Animado
+│ BT: Connected       │       │ Battery: 84% OK     │
 └─────────────────────┘       └─────────────────────┘
 ```
 
-### **🎬 Durante Digitação Rápida:**
+### **🎬 Durante Digitação + Caps Lock Ativo:**
 ```
-ESQUERDA (WPM animado)         DIREITA (Sem mudança)
+ESQUERDA (WPM subindo)         DIREITA (Reagindo)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 78             │       │ Sofle Right         │
-│ █████████████▁▁     │       │ Battery: 84%        │ ← Barras se movem
-│ Layer: default      │       │ Split: Connected    │
-│ Battery: 87% BT:1   │       │ Peripheral          │
+│ WPM: 78             │       │ ⌨️ [CAPS] NUM SCR   │ ← CAPS piscando
+│ █████████████▁▁     │ ← Barras subindo │ ⇧⌃⌥⌘ [SHIFT]      │ ← Shift ativo
+│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Sempre girando
+│ BT: Connected       │       │ Battery: 84% OK     │
 └─────────────────────┘       └─────────────────────┘
 ```
 
-### **💤 Quando Para de Digitar:**
+### **💤 Estado Relaxado:**
 ```
-ESQUERDA (WPM zerado)          DIREITA (Sem mudança)
+ESQUERDA (WPM baixo)           DIREITA (Animação contínua)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 0              │       │ Sofle Right         │
-│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁     │       │ Battery: 84%        │ ← Barras vazias
-│ Layer: default      │       │ Split: Connected    │
-│ Battery: 87% BT:1   │       │ Peripheral          │
+│ WPM: 0              │       │ ⌨️ caps num scr     │ ← Sem locks ativos
+│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁     │ ← Barras vazias │ ⌃⌥⌘ modifiers      │ ← Sem modificadores
+│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Continua girando
+│ BT: Connected       │       │ Battery: 84% OK     │
 └─────────────────────┘       └─────────────────────┘
 ```
 
