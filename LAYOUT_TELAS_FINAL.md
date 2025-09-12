@@ -1,8 +1,8 @@
 # 🖥️ Layout Final das Telas OLED - Configuração Personalizada
 
-## 🎯 **CONFIGURAÇÃO COM DUPLO WPM:**
-- **TELA ESQUERDA:** WPM Gráfico de Barras + Layer + Conexão 📊
-- **TELA DIREITA:** WPM Velocímetro + Animações + Status 🕐
+## 🎯 **CONFIGURAÇÃO EQUILIBRADA COM PET:**
+- **TELA ESQUERDA:** WPM Barras + Layer + Bateria + Conexão (limpo) 📊
+- **TELA DIREITA:** HID + Modifiers + Pet Luna + Gems + Status 🐕✨
 
 ---
 
@@ -39,25 +39,25 @@ Volta ao normal  → "default"
 
 ---
 
-## 📱 **TELA DIREITA - VELOCÍMETRO WPM:**
+## 📱 **TELA DIREITA - COM PET LUNA:**
 
 ### **🖥️ Layout Esperado:**
 ```
 ┌─────────────────────────┐
-│    WPM: 45             │  ← Mesma velocidade da esquerda
+│ ⌨️ CAPS NUM SCR         │  ← HID status (pisca quando ativo)
 ├─────────────────────────┤
-│      ◗────►            │  ← VELOCÍMETRO com agulha
-│   0    50    100       │  ← Escala visual (0-100)
+│ ⇧⌃⌥⌘ + 🐕 Luna        │  ← Modifiers + Pet reagindo
 ├─────────────────────────┤
-│ ⌨️ CAPS ⇧⌃⌥⌘          │  ← HID + Modifiers compacto
+│     💎 ◊ ◇ ♦           │  ← Gems girando (1.5s)
 │ Battery: 84% Split:OK   │  ← Info essencial
 └─────────────────────────┘
 ```
 
 ### **🎬 Elementos da Tela Direita:**
-- **🕐 Velocímetro WPM:** Agulha se move conforme velocidade de digitação
+- **🐕 Pet Luna:** Reage ao CAPS Lock e modificadores pressionados
 - **⌨️ HID Status:** CAPS/NUM/SCROLL piscam quando ativados
 - **🔧 Modifiers:** ⇧⌃⌥⌘ acendem quando pressionados
+- **💎 Gem Animation:** Pedras giram continuamente a cada 1.5s
 - **🔋 Info Essencial:** Bateria + status split sempre visível
 
 ### **📊 WPM na Tela Esquerda:**
@@ -102,35 +102,35 @@ Máximo:        WPM: 100  ███████████████
 
 ## 🎯 **COMPARAÇÃO VISUAL:**
 
-### **📊 DUPLO WPM - DOIS ESTILOS:**
+### **📊 WPM ESQUERDA + PET DIREITA:**
 ```
-TELA ESQUERDA (Gráfico Barras) TELA DIREITA (Velocímetro)
+TELA ESQUERDA (Limpa + WPM)    TELA DIREITA (Pet + Animações)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 45             │       │ WPM: 45             │
-│ ████████▁▁▁▁▁▁▁     │ ← Barras │   ◗────►          │ ← Agulha
-│ Layer: default      │       │ 0    50   100      │ ← Escala
-│ BT: Connected       │       │ ⌨️ CAPS ⇧⌃⌥⌘       │ ← Compact
+│ WPM: 45             │       │ ⌨️ CAPS NUM SCR     │
+│ ████████▁▁▁▁▁▁▁     │ ← Barras │ ⇧⌃⌥⌘ + 🐕 Luna   │ ← Pet reagindo
+│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Gems girando
+│ BT: Connected       │       │ Battery: 84% OK     │
 └─────────────────────┘       └─────────────────────┘
 ```
 
-### **🎬 Durante Digitação Rápida + Caps Lock:**
+### **🎬 Durante Digitação + Caps Lock Ativo:**
 ```
-ESQUERDA (Barras subindo)      DIREITA (Agulha girando)
+ESQUERDA (WPM subindo)         DIREITA (Luna reagindo)
 ┌─────────────────────┐       ┌─────────────────────┐
-│ WPM: 78             │       │ WPM: 78             │
-│ █████████████▁▁     │ ← Barras │      ◗──────►     │ ← Agulha move
-│ Layer: default      │       │ 0    50     100    │ ← 78% da escala
-│ BT: Connected       │       │ [CAPS] ⇧⌃⌥⌘       │ ← CAPS piscando
+│ WPM: 78             │       │ [CAPS] NUM SCR      │ ← CAPS piscando
+│ █████████████▁▁     │ ← Barras │ [⇧]⌃⌥⌘ + 😊🐕     │ ← Luna feliz!
+│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Gems girando
+│ BT: Connected       │       │ Battery: 84% OK     │
 └─────────────────────┘       └─────────────────────┘
 ```
 
 ### **💤 Estado Relaxado:**
 ```
-ESQUERDA (WPM baixo)           DIREITA (Animação contínua)
+ESQUERDA (WPM parado)          DIREITA (Luna dormindo)
 ┌─────────────────────┐       ┌─────────────────────┐
 │ WPM: 0              │       │ ⌨️ caps num scr     │ ← Sem locks ativos
-│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁     │ ← Barras vazias │ ⌃⌥⌘ modifiers      │ ← Sem modificadores
-│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Continua girando
+│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁     │ ← Barras vazias │ ⌃⌥⌘ + 😴🐕       │ ← Luna dormindo
+│ Layer: default      │       │ 💎 ◊ ◇ ♦          │ ← Gems continuam
 │ BT: Connected       │       │ Battery: 84% OK     │
 └─────────────────────┘       └─────────────────────┘
 ```
