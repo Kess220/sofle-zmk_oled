@@ -47,7 +47,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "default";
+            display-name = "⚔️ base";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
@@ -70,7 +70,7 @@
         };
 
         lower_layer {
-            display-name = "lower";
+            display-name = "⚙️lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -92,7 +92,7 @@
         };
 
         raise_layer {
-            display-name = "raise";
+            display-name = "👤 arise";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -103,7 +103,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4                    &trans     &trans    &trans    &trans     &trans   &trans
-&trans      &kp SLASH      &kp LS(SLASH)  &kp K_CMENU    &trans          &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
+&trans      &kp SLASH      &kp LS(W)      &kp K_CMENU    &trans          &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT       &kp LCTRL      &kp LSHFT      &trans          &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp C_AC_UNDO  &kp C_AC_CUT   &kp C_AC_COPY  &kp C_AC_PASTE  &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
                            &trans         &trans         &trans          &trans        &trans    &trans  &trans     &trans    &trans    &trans
@@ -120,7 +120,7 @@
             // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
             //                    |         |         |         |         |         | |      |      |      |       |      |
 
-            display-name = "adjust";
+            display-name = "⚙️ adjust";
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
