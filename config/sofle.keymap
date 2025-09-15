@@ -31,7 +31,7 @@
         Print_Selection: Print_Selection {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(NUMBER_4))>;
+            bindings = <&kp LS(LC(NUMBER_4))>;
             label = "PRINT_SELECTION";
         };
 
