@@ -81,7 +81,7 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&tog 4     &kp F1          &kp F2          &kp F3           &kp F4                &kp F5                                                       &kp F6                &kp F7                 &kp F8           &kp F9     &kp F10          &kp F11
+&to 4      &kp F1          &kp F2          &kp F3           &kp F4                &kp F5                                                       &kp F6                &kp F7                 &kp F8           &kp F9     &kp F10          &kp F11
 &kp GRAVE  &kp C_PREVIOUS  &kp MINUS       &kp PLUS         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS         &kp MINUS  &kp C_NEXT       &kp F12
 &trans     &kp EXCL        &kp SLASH       &kp ASTERISK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp ASTRK        &kp SLASH  &kp EXCLAMATION  &kp PIPE
 &trans     &kp EQUAL       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp UNDER             &kp EQUAL              &kp K_CALCULATOR    &kp C_PLAY_PAUSE  &kp EQUAL             &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp COLON  &kp BSLH         &trans
