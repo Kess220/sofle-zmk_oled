@@ -133,11 +133,11 @@
         gamer {
             display-name = "game mod";
             bindings = <
-&tog 0          &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp LEFT_BRACKET
-&kp ESC         &kp Q   &kp W     &kp E     &kp R      &kp T                                      &kp Y   &kp U      &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB         &kp A   &kp S     &kp D     &kp F      &kp G                                      &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_AL_LOCK    &Print_Selection  &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                        &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp SPACE        &kp RET           &mo 2   &kp RCTRL  &kp RALT   &kp RGUI
+&tog 0          &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                     &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp LEFT_BRACKET
+&kp ESC         &kp Q   &kp W   &kp E   &kp R   &kp T                                      &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB         &kp A   &kp S   &kp D   &kp F   &kp G                                      &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp C_AL_LOCK    &Print_Selection  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                        &trans  &trans  &trans  &trans  &kp SPACE        &kp RET           &trans  &trans  &trans     &trans
             >;
 
             sensor-bindings =
