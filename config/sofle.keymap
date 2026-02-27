@@ -14,7 +14,6 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-#define GAMER 4
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -46,21 +45,12 @@
 
     combos {
         compatible = "zmk,combos";
-
-        // TOGGLE GAMER: F + J = liga/desliga modo gamer
-
-        combo_gamer_toggle {
-            timeout-ms = <50>;
-            key-positions = <17 31>; // F + J positions
-            bindings = <&tog 0>;
-            layers = <0>; // Funciona em BASE e GAMER
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        gamer {
+        default_layer {
             display-name = "default";
 
             // ------------------------------------------------------------------------------------------------------------
