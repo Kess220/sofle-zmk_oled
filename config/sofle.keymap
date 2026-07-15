@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define BASE 0
 #define LOWER 1
@@ -125,19 +126,19 @@
 
         adjust_layer {
             // ----------------------------------------------------------------------------------------------------------------------------
-            // | BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                  |      |      |       |      |       |       |
-            // | EXTPWR |       |       |       |       |       |                  |      |      |       |      |       |       |
-            // |        |       |       |       |       |       |                  |      |      |       |      |       |       |
-            // |        |       |       |       |       |       |         |  |     |      |      |       |      |       |       |
-            //                  |       |       |       |       |         |  |     |      |      |       |      |
+            // | BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                  |         |         |         |          |       |       |
+            // | EXTPWR |       |       |       |       |       |                  | SCR_UP  | LCLICK  | MOV_UP  | RCLICK   |       |       |
+            // |        |       |       |       |       |       |                  | SCR_DN  |MOV_LEFT | MOV_DN  | MOV_RIGHT|       |       |
+            // |        |       |       |       |       |       |         |  |     |         |         |         |          |       |       |
+            //                  |       |       |       |       |         |  |     |         |         |         |          |
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &none         &none         &none         &none         &none                          &none  &none  &none  &none  &none  &none
-&none              &none         &none         &none         &none         &none                          &none  &none  &none  &none  &none  &none
-&none              &none         &none         &none         &none         &none         &none      &none  &none  &none  &none  &none  &none  &none
-                                 &none         &none         &none         &none         &none      &none  &none  &none  &none  &none
+&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none          &none          &none         &none           &none  &none
+&ext_power EP_TOG  &none         &none         &none         &none         &none                          &msc SCRL_UP   &mkp LCLK      &mmv MOVE_UP  &mkp RCLK       &none  &none
+&none              &none         &none         &none         &none         &none                          &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
+&none              &none         &none         &none         &none         &none         &none      &none  &none          &none          &none         &none           &none  &none
+                                 &none         &none         &none         &none         &none      &none  &none          &none          &none         &none
             >;
         };
 
