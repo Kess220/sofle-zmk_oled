@@ -88,3 +88,30 @@ A vantagem do ZMK.STUDIO é que você quase nunca precisará mexer em código, c
 
 ---
 
+## Layout deste build
+
+Uso split (`nice_nano_v2`, OLED, sem RGB) pra trabalho (Scala/Spark/Databricks, macOS) e jogos (Windows). Camadas atuais:
+
+- **BASE** — QWERTY padrão.
+- **LOWER** — F-keys, símbolos, controles de mídia (prev/play-pause/next), toggle da GAMER.
+- **RAISE** — seleção de perfil Bluetooth (`BT_CLR`/`BT_SEL 0-4`), navegação (setas + HOME/END/PGUP/PGDN), clipboard (Ctrl+A/Z/X/C/V + Redo `Ctrl+Shift+Z`), e troca de canal de saída (`OUT_USB`/`OUT_BLE`, ver seção abaixo).
+- **ADJUST** (`LOWER`+`RAISE` seguradas) — mouse emulation: scroll em Y/H, click em U/O, movimento em I/J/K/L. Segurar **T** dentro da ADJUST ativa velocidade turbo (`TURBO_MOUSE`) nessas mesmas teclas de movimento.
+- **GAMER** — troca Space/Enter de posição pra FPS; ativa via combo **F+J** ou pela tecla dedicada no canto superior esquerdo da LOWER. As demais teclas caem (`&trans`) pra BASE, então LOWER/RAISE continuam acessíveis normalmente dentro da GAMER.
+
+### Trocar entre USB e Bluetooth sem tirar o cabo
+
+Por padrão o ZMK muda pra saída USB assim que detecta o cabo conectado. Se você quiser usar o cabo **só pra carregar** e continuar indo por Bluetooth pra outro dispositivo:
+
+- `RAISE` + tecla **6** (linha numérica) → `&out OUT_USB` (força saída via cabo)
+- `RAISE` + tecla **7** (linha numérica) → `&out OUT_BLE` (força saída via BLE, mesmo com o cabo plugado)
+
+Depois é só usar o `BT_SEL 0-4` (mesma camada) pra escolher o dispositivo pareado.
+
+### Energia
+
+- `CONFIG_ZMK_DISPLAY_BLANK_ON_IDLE` — apaga o render do OLED no idle (economia leve, cotidiana).
+- `CONFIG_ZMK_SLEEP` + `CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=600000` — deep sleep de verdade (corta CPU/rádio) após 10min parado. Acorda no primeiro key press.
+- `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN` está desligado no central — foi um teste pra um problema de reconexão lenta/desconexão aleatória no Windows via adaptador USB de Bluetooth. Se o board voltar a ter esse problema mesmo com o ajuste de energia USB do Windows feito, essa é a próxima flag a investigar.
+
+---
+
